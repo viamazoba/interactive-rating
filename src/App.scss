@@ -1,0 +1,23 @@
+@import '../src/styles/abstracts/variables.scss';
+
+*, html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Overpass', sans-serif;
+  /*font-family: 'Inter', sans-serif;*/
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: $Very-Dark-Blue;
+}
