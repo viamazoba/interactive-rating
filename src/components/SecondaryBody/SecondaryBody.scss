@@ -21,6 +21,11 @@
     color: $Light-Grey;
     font-weight: 400;
     text-align: center;
+
+    @media (min-width: 1440px) {
+        padding: 10px;
+
+    }
 }
 
 .card__bill-icon{
