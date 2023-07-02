@@ -1,0 +1,76 @@
+@import '../../styles/abstracts/variables.scss';
+
+.card-title{
+    font-size: 20px;
+    color: $White;
+    font-weight: 700;
+}
+
+.card-text{
+    font-size: $font-size-all;
+    color: $Light-Grey;
+    font-weight: 400;
+}
+
+.btn{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2.1px;
+    background-color: $Orange;
+    color: $White;
+    border-color: $Orange;
+    font-weight: 700;
+
+    &:hover{
+        color: $Orange;
+        background-color: $White;
+    }
+}
+
+.card__container-election{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__election-button{
+    width: $dimension-button;
+    height: $dimension-button;
+    border-radius: 100px;
+    border: 1px solid $Very-Dark-Blue;
+    background-color: $Very-Dark-Blue;
+    font-size: 12px;
+    color: $Light-Grey;
+    transition: background-color 0.3s ease;
+}
+
+
+.card-body{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .card__star-icon{
+        display: block;
+        border-radius: 100px;
+        width: 35px;
+        height: 35px;
+        background-color: $Very-Dark-Blue;
+        background-image: url('../../../public/icon-star.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35%;
+    }
+
+}
+
+.card__election-button.selected{
+    color: $White;
+    background-color: $Orange;
+}

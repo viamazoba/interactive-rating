@@ -1,26 +1,42 @@
+import { useState } from 'react';
 import './Card.scss'
+import PrincipalBody from '../PrincipalBody'
+import SecondaryBody from '../SecondaryBody'
 
 
 export function Card() {
-    //const [count, setCount] = useState(0)
+  
+  const [selectedRating, setSelectedRating] = useState(0);
+  const [boolRating, setboolRating] = useState(false);
+  const [boolSubmit, setboolSubmit] = useState(false);
+  var boolRatingAux = boolRating;
+
+  const handleRatingHover = (rating) => {
+    // !boolRating?setSelectedRating(rating):'';
+    !boolRatingAux?setSelectedRating(rating):'';
+  };
+
+  const handleRatingOver = () => {
+    !boolRatingAux?setSelectedRating(0):'';
+  };
+
+  const handleRatingChoose = (rating) => {
+    setSelectedRating(rating);
+    setboolRating(true);
+    boolRatingAux = true;
+  };
+
+  const handleSubmit = () => {
+    setboolSubmit(true)
+  };
   
     return (
       <>
         <div className="card">
            
-            <div className="card-body">
-                <span className='card__star-icon'></span>
-                <h5 className="card-title">How did we do?</h5>
-                <p className="card-text">Please let us know how we did with your support request. All feddback is appreciated to help us improve our offering! </p>
-                <div className='card__container-election'>
-                    <button className='card__election-button'>1</button>
-                    <button className='card__election-button'>2</button>
-                    <button className='card__election-button'>3</button>
-                    <button className='card__election-button'>4</button>
-                    <button className='card__election-button'>5</button>
-                </div>
-                <a href="#" className="btn btn-primary">SUBMIT</a>
-            </div>
+          {!boolSubmit && <PrincipalBody onRatingHover = {handleRatingHover} selectedRating = {selectedRating} onRatingOver = {handleRatingOver} onRatingChoose={handleRatingChoose} onSubmit = {handleSubmit}></PrincipalBody>}
+            {boolSubmit && <SecondaryBody selectedRating = {selectedRating}></SecondaryBody>}
+            
 
         </div>
       </>
