@@ -2,12 +2,8 @@
 
 Este proyecto es un componente interactivo de calificación de productos basado en React.js. Permite a los usuarios seleccionar una calificación y enviarla, lo que resulta en una vista de agradecimiento que muestra la calificación recibida. El proyecto utiliza React.js para la gestión de estados, la metodología BEM para la nomenclatura de clases CSS, Bootstrap para el estilo y diseño responsivo para tamaños de pantalla de 375px a 1440px. Sass se utiliza para el estilo de los componentes.
 
-Capturas de pantalla
-![Pantalla principal](./design/mobile-design.jpg)
 
-
-Captura de pantalla 2
-![Pantalla de agradecimiento](./design/mobile-thank-you-state.jpg)
+![Pantalla principal](./design/mobile-design.jpg) ![Pantalla de agradecimiento](./design/mobile-thank-you-state.jpg)
 
 ## Tecnologías Utilizadas
 
@@ -28,19 +24,19 @@ Para instalar y ejecutar el proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
 
-   * git clone https://github.com/viamazoba/interactive-rating.git
+  ```git clone https://github.com/viamazoba/interactive-rating.git ```
 
 2. Navega al directorio del proyecto:
 
-    * cd interactive-rating
+    ```cd interactive-rating```
 
 3. Instala las dependencias utilizando npm:
 
-    * npm install
+    ```npm install```
 
 4.Inicia el servidor de desarrollo:
 
-    * npm run dev
+```npm run dev```
 
 Esto iniciará el proyecto en un servidor de desarrollo local y te proporcionará una URL para verlo en tu navegador.
 
